@@ -66,9 +66,9 @@ public class Api {
     public void testFullUpdateUser(){
 
         String jsonBody = "{\n" +
-                "\"email\": \"User’s Email\",\n" +
+                "\"email\": \"test@test.me\",\n" +
                 "\"hobby\": \"User’s Hobby\",\n" +
-                "\"name\": \"User’s Display Name\",\n" +
+                "\"name\": \"myName\",\n" +
                 "\"name1\": \"User’s Name\",\n" +
                 "\"surname1\": \"User’s Surname\",\n" +
                 "\"fathername1\": \"User’s Father name\",\n" +
@@ -82,8 +82,8 @@ public class Api {
                 "\"inn\": \"012345678901\",\n" +
                 "\"adres\": \"User’s Addredd\",\n" +
                 "\"gender\": \"m\",\n" +
-                "\"birthday\": \"DD.MM.YYYY\",\n" +
-                "\"date_start\": \" DD.MM.YYYY\"\n" +
+                "\"birthday\": \"11.11.1980\",\n" +
+                "\"date_start\": \" 11.11.1980\"\n" +
                 "}";
 
         RequestSpecification request = RestAssured.given();
@@ -107,7 +107,7 @@ public class Api {
 
         RequestSpecification request = RestAssured.given();
         request.contentType(ContentType.JSON);
-        request.baseUri(URL_FULLUPDATEUSER);
+        request.baseUri(URL_DELETEUSER);
         request.body(jsonBody);
 
         Response response = request.delete();
